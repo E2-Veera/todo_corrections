@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>todo val</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css'>
+
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="full">
+            <div class="title">
+                <span>
+                    HOD Management
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="content">
+
+        <div class="fullBody">
+
+            <div>
+
+                <div class="loginPopup">
+                    <div class="formPopup" id="popupForm">
+
+                        <div class="formContainer">
+                            <form id=" form" name="form1">
+                                <h2>HOD Form</h2>
+                                <label for="name">
+                                    <span>Full Name:</span>
+                                    <span id="error"></span>
+                                </label>
+                                <input type="text" id="name" placeholder="Full Name" maxlength="20">
+                                <label for="content">
+                                    <span>Experiance:</span>
+                                    <span id="expError"> </span>
+                                </label>
+                                <input type="text" id="exp" placeholder="Experiance" maxlength="2">
+                                <label for="register no">
+                                    <span>Register No:</span>
+                                    <span id="regErr"></span>
+                                </label>
+                                <input type="text" id="regno" placeholder="Register Number " maxlength="10">
+                                <button type="button" id="btn" onclick="formActions()" class="btn">ADD</button>
+                                <button type="button" onclick="closeForm()" class="btn cancel">CLOSE</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+
+
+                <div id="id01" class="modal">
+
+                    <form class="modal-content" action="/action_page.php">
+                        <div class="container">
+                            <h1>Delete Account</h1>
+                            <p>Are you sure you want to delete your account?</p>
+
+                            <div class="clearfix">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                                    class="cancelbtn">Cancel</button>
+                                <button type="button" onclick="remove(this);" class="deletebtn">Delete</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div id="msg" class="statusMsg">
+
+            </div>
+
+            <div class="popUpContainer">
+                <button class="openButton" onclick="openForm(),newReset()"><strong>+ ADD HOD</strong></button>
+            </div>     
+
+            <div class="mainTable">
+
+                <div class="field">
+
+                    <table id="table">
+
+                        <tr>
+                            <td class="col1">Name</td>
+                            <td class="col1">Experiance</td>
+                            <td class="col1">RegNo</td>
+                            <td class="col1">Action</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
